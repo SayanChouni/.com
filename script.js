@@ -112,12 +112,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-// Contact Form Submission Logic
-// fetch URL-টি পরিবর্তন করুন:
-fetch('/api/send-telegram', { // <-- শুধুমাত্র এই লাইনটি পরিবর্তন হবে
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-})
+// Contact Form Submission to Telegram Logic (Corrected)
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+const submitBtn = contactForm.querySelector('.submit-btn');
+
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop default form submission
+
+    // --- এই দুটি লাইন সম্ভবত আপনার কোডে মিসিং ছিল ---
+    // ১. ফর্মের সব ইনপুট থেকে ডেটা সংগ্রহ করা
+    const formData = new FormData(contactForm);
+    // ২. সেই ডেটাগুলোকে একটি অবজেক্টে পরিণত করা
+    const data = Object.fromEntries(formData.entries());
+    // --------------------------------------------------
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending...';
+    formStatus.innerHTML = ''; // Clear previous status
+
+    fetch('/api/send-telegram', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data), // এখন 'data' ভ্যারিয়েবলটি এখানে সঠিকভাবে কাজ করবে
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.status === 'success') {
+            formStatus.textContent = result.message;
+            formStatus.className = 'form-status success';
+            contactForm.reset(); // Clear the form
+        } else {
+            formStatus.textContent = result.message;
+            formStatus.className = 'form-status error';
+        }
+    })
+    .catch(error => {
+        formStatus.textContent = 'An error occurred. Please try again later.';
+        formStatus.className = 'form-status error';
+        console.error('Error:', error);
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Send Signal <i class="fas fa-paper-plane"></i>';
+    });
+});
