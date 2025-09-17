@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>SAYAN CHOUNI | DEVELOPER</title>>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+</head>
+<body>
+    
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav>
+         <div class="logo">SAYAN </div>
+        <ul>
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>I Build <span id="typing-effect"></span></h1>
+            <p>A Digital Architect Crafting Web Solutions of Tomorrow.</p>
+            <a href="#projects" class="cta-btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="reveal">
+    <h2>ABOUT ME</h2>
+    <div class="about-container">
+        <div class="about-image">
+            <div class="image-wrapper">
+                <img src="image/Gemini_Generated_Image_1whluf1whluf1whl.png" alt="Your Professional Photo">
+            </div>
+        </div>
+        <div class="about-text">
+            <h3>Hello, I'm SAYAN CHOUNI</h3>
+            <p>I am a passionate Digital Architect specializing in full-stack development. My goal is to transform complex problems into elegant, efficient, and scalable digital solutions. With a keen eye for detail and a commitment to quality, I craft web experiences that are not only functional but also secure and user-friendly.</p>
+            
+            <ul class="about-skills-list">
+                <li><i class="fas fa-terminal"></i> Full-Stack Web Apps</li>
+                <li><i class="fas fa-robot"></i> Telegram Bots & Automation</li>
+                <li><i class="fas fa-shield-alt"></i> API Development & Security</li>
+            </ul>
+
+            <a href="#" class="cta-btn cv-btn">Download CV</a>
+        </div>
+    </div>
+</section>
+
+    <section id="skills" class="reveal">
+        <h2>MY SKILL</h2>
+        <div class="skills-container">
+            <div class="skill-tabs">
+                <button class="tab-btn active" data-tab="frontend">Frontend</button>
+                <button class="tab-btn" data-tab="backend">Backend</button>
+                <button class="tab-btn" data-tab="others">Others</button>
+            </div>
+
+            <div class="skill-content-container">
+                <div id="frontend" class="skill-content active">
+                    <div class="skill-card" data-tilt>
+                        <i class="fab fa-html5"></i><h3>HTML5</h3>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <i class="fab fa-css3-alt"></i><h3>CSS3</h3>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <i class="fab fa-js-square"></i><h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <i class="fab fa-react"></i><h3>React</h3>
+                    </div>
+                </div>
+
+                <div id="backend" class="skill-content">
+                    <div class="skill-card" data-tilt>
+                        <i class="fab fa-php"></i><h3>PHP</h3>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <i class="fas fa-database"></i><h3>SQL</h3>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <i class="fas fa-plug"></i><h3>API Dev</h3>
+                    </div>
+                </div>
+
+                <div id="others" class="skill-content">
+                    <div class="skill-card" data-tilt>
+                        <i class="fab fa-telegram"></i><h3>Telegram Bots</h3>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <i class="fas fa-bolt"></i><h3>Automation</h3>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <i class="fas fa-shield-alt"></i><h3>Security Audit</h3>
+                    </div>
+                     <div class="skill-card" data-tilt>
+                        <i class="fas fa-globe"></i><h3>Web Apps</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h2>MY PROJECTS</h2>
+       <div class="projects-grid">
+    <div class="project-card">
+        <img src="image/avdbot.png" alt="Project 1">
+        <div class="project-overlay">
+            <h3>ALL IN ONE VIDEO DOWNLOADER BOT</h3>
+            <p>Tech: PHP, SQL, API</p>
+            <a href="https://t.me/snapdl_bot" target="_blank" class="project-btn">OPEN THE BOT</a>
+        </div>
+    </div>
+    <div class="project-card">
+        <img src="image/aiimagegen.jpg" alt="Project 2">
+        <div class="project-overlay">
+            <h3>AI IMAGE GEN</h3>
+            <p>Tech: PHP, SQL, NODE JS, REACT, API</p>
+            <a href="https://aiimagegen.techsology.site/" target="_blank" class="project-btn">TRY THIS TOOL</a>
+        </div>
+    </div>
+    <div class="project-card">
+        <img src="image/custsms.jpg" alt="Project 3">
+        <div class="project-overlay">
+            <h3>CUSTOM SMS SENDER TOOL</h3>
+            <p>Tech: PHP, SQL, HTML, CSS, JS, API</p>
+            <a href="https://t.me/+0Nw5y6axaAszZTA1" target="_blank" class="project-btn">JOIN US TO USE THIS TOOL</a>
+        </div>
+    </div>
+</div>
+    </section>
+   <section id="contact" class="reveal">
+    <h2>CONTACT ME FOR YOUR DREAM PROJECT</h2>
+    <div class="contact-container">
+        <div class="contact-form-wrapper">
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="telegram" name="telegram" required>
+                    <label for="telegram">Telegram Username (@username)</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="mobile" name="mobile">
+                    <label for="mobile">Mobile Number (Optional)</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Send Signal <i class="fas fa-paper-plane"></i>
+                </button>
+                <div id="form-status"></div> </form>
+        </div>
+
+        <div class="contact-info">
+            <h3>Let's Build The Future</h3>
+            <p>I'm currently available for freelance work and open to discussing new projects. If you have an idea, a question, or just want to say hello, feel free to send a message!</p>
+            <div class="social-links-contact">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
